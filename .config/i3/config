@@ -211,7 +211,7 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightne
 bindsym $mod+x exec gnome-screensaver-command -a
 
 # screenshot
-bindsym $mod+p exec scrot -u -e  'xclip -selection clipboard -t "image/png" < $f' 
+bindsym $mod+p exec scrot -u -e   'xclip -selection clipboard -t "image/png" < $f' ~/Picture/screencap/lastcap.png
 
 # start programs
 bindsym $mod+n exec urxvt -e nnn -l
