@@ -49,5 +49,5 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
 fi
 setxkbmap de
 xinput set-prop 11 285 1
-~/sripts/rbgc.sh
+rbgc.sh
 exec i3 
