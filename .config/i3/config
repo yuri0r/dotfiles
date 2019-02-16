@@ -208,10 +208,11 @@ bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
 
 # lock screen
-bindsym $mod+x exec gnome-screensaver-command -a
-
+bindsym $mod+x exec i3lock -i /home/yuri/wallpaper/current.png
+ 
 # screenshot
 bindsym $mod+p exec scrot -u -e   'xclip -selection clipboard -t "image/png" < $f' ~/Picture/screencap/lastcap.png
+bindsym $mod+Shift+p exec scrot -e   'xclip -selection clipboard -t "image/png" < $f' ~/Picture/screencap/lastcap.png
 
 # start programs
 bindsym $mod+n exec urxvt -e nnn -l

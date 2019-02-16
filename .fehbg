@@ -1,2 +1,0 @@
-#!/bin/sh
-feh --bg-center --no-fehbg --randomize ~/wallpaper/* 
