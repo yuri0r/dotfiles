@@ -48,6 +48,6 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
  unset f
 fi
 setxkbmap de
-xinput set-prop 11 285 1
+xinput set-prop 'DLL075B:01 06CB:76AF Touchpad' 'libinput Tapping Enabled' 0
 rbgc.sh
 exec i3 
