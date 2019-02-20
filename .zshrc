@@ -12,20 +12,33 @@ zstyle :compinstall filename '/home/yuri/.zshrc'
 autoload -Uz compinit
 compinit
 # End of lines added by compinstall
+
+#get links autobraketed
+autoload -Uz bracketed-paste-magic
+zle -N bracketed-paste bracketed-paste-magic
+autoload -Uz url-quote-magic
+zle -N self-insert url-quote-magic
+
 #fancy or less fancy prompt
 #PROMPT='%B%F{white}[%F{red}%n%F{yellow}@%F{cyan}%m %F{magenta}%~%F{white}]%f%#%b '
 PROMPT='%B%~ %# %b'
 
 #all the aliases
-alias la='ls -la'
-alias ll='ls -l'
-
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
+alias lss='ls -shw1 --group-directories-first'
+alias ll='ls -l --group-directories-first'
+alias la='ls -la --group-directories-first'
+alias l='ls -CF --group-directories-first'
+
+alias x="exit"
 alias cl='clear'
+
 alias pi='sudo pacman -S'
 alias pu='sudo pacman -Syu'
 alias ps='pacman -Ss'
 alias pr='sudo pacman -Rs'
 alias pll='pacman -Qi'
 alias pl='pacman -Si'
+
+alias n="nnn"

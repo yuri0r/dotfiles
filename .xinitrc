@@ -8,15 +8,7 @@ sysmodmap=/etc/X11/xinit/.Xmodmap
 # merge in defaults and keymaps
 
 if [ -f $sysresources ]; then
-
-
-
-
-
-
-
     xrdb -merge $sysresources
-
 fi
 
 if [ -f $sysmodmap ]; then
@@ -24,21 +16,12 @@ if [ -f $sysmodmap ]; then
 fi
 
 if [ -f "$userresources" ]; then
-
-
-
-
-
-
-
     xrdb -merge "$userresources"
-
 fi
 
 if [ -f "$usermodmap" ]; then
     xmodmap "$usermodmap"
 fi
-
 # start some nice programs
 
 if [ -d /etc/X11/xinit/xinitrc.d ] ; then
@@ -47,7 +30,8 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
  done
  unset f
 fi
-setxkbmap de
-xinput set-prop 'DLL075B:01 06CB:76AF Touchpad' 'libinput Tapping Enabled' 0
+
 rbgc.sh
+setxkbmap de
+xinput set-prop 'DLL075B:01 06CB:76AF Touchpad' 'libinput Tapping Enabled' 1
 exec i3 
