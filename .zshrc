@@ -42,3 +42,4 @@ alias pll='pacman -Qi'
 alias pl='pacman -Si'
 
 alias n="nnn"
+alias wl="mpv 'https://www.youtube.com/playlist?list=WL'"
