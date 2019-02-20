@@ -18,24 +18,28 @@ general {
 
 order += "volume master"
 order += "wireless wlp58s0"
-order += "ethernet enp0s25"
+order += "ethernet enp0s20f0u2"
 order += "battery 0"
 order += "load"
 order += "tztime local"
 
 wireless wlp58s0 {
-    format_up = "%quality %essid %ip"
+    format_up = " %quality %essid %ip"
     format_down = "wifi down"
 }
 
-ethernet enp0s25 {
+ethernet enp0s20f0u2 {
     format_up = "%ip"
-    format_down = ""
+    format_down = "eth down"
 }
 
 battery 0 {
-    format = "%percentage"
-    format_down = ""
+    format = " %percentage"
+    format_down = "bat down"
+    status_chr = "⚡%percentage"
+    status_bat = " BAT"
+    status_unk = "? UNK"
+    status_full = " FULL"
     integer_battery_capacity = true
     low_threshold = 11
     threshold_type = percentage
@@ -43,7 +47,7 @@ battery 0 {
 
 
 tztime local {
-    format = "%A %e.%B %H:%M:%S"
+    format = " %A %e.%B %H:%M:%S"
 }
 
 load {
@@ -51,8 +55,8 @@ load {
 }
 
 volume master {
-    format = "%volume"
-    format_muted = "muted "
+    format = " %volume"
+    format_muted = ""
     device = "default"
     mixer = "Master"
     mixer_idx = 0
