@@ -1,9 +1,3 @@
-URxvt.font: xft:FiraCode:size=15
-URxvt*transparent: true
-URxvt*tintcolor: black
-URxvt*shading: 6
-URxvt*fading: 60
-URxvt*scrollBar: false
 ! special
 *.foreground:   #00ff00
 *.background:   #1d1f21
@@ -41,3 +35,10 @@ URxvt*scrollBar: false
 *.color7:       #c5c8c6
 *.color15:      #ffffff
 
+#urxvt settings
+URxvt*font: xft:FiraMono:size=15
+URxvt*transparent: true
+URxvt*tintcolor: black
+URxvt*shading: 6
+URxvt*fading: 60
+URxvt*scrollBar: false
