@@ -8,11 +8,11 @@
        "x": 0,
        "y": 0
     },
-    "name": "urxvt",
+    "name": "st",
     "percent": 1,
     "swallows": [
        {
-        "instance": "^urxvt$"
+        "instance": "^st"
        }
     ],
     "type": "con"
