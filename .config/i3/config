@@ -20,6 +20,7 @@ hide_edge_borders smart
 #i3-gaps specific configs
 gaps inner 20
 workspace 8 gaps inner 0
+workspace 9 gaps inner 0
 workspace 10 gaps inner 0
 smart_gaps on
 
@@ -223,6 +224,7 @@ bindsym $mod+Shift+p exec scrot -e   'xclip -selection clipboard -t "image/png" 
 
 # start programs
 bindsym $mod+n exec i3-sensible-terminal -e nnn -l
+bindsym $mod+t exec i3-sensible-terminal -e top
 
 # window settings
 #for_window [class="^.*"] border pixel 0
@@ -234,12 +236,13 @@ assign [instance="google-chrome"] 1
 assign [instance="slack"] 9
 assign [instance="discord"] 9
 assign [instance="telegram"] 10
+assign [instance="tweetdeck.com"] 10
 
 # auto start
-exec --no-startup-id google-chrome-stable
 exec --no-startup-id "i3-msg 'workspace 10; append_layout /home/yuri/.config/i3/social.json'"
+exec --no-startup-id "i3-msg 'workspace 2; append_layout /home/yuri/.config/i3/starterm.json'"
+exec --no-startup-id google-chrome-stable
 exec --no-startup-id telegram-desktop
 exec --no-startup-id tweetdeck.sh
-exec --no-startup-id "i3-msg 'workspace 2; append_layout /home/yuri/.config/i3/starterm.json'"
 exec --no-startup-id i3-sensible-terminal
-exec --no-startup-id "i3-msg 'workspace 1'"
+exec --no-startup-id i3-msg workspace 1
