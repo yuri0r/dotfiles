@@ -27,14 +27,16 @@ smart_gaps on
 set $bg-color			#000000
 set $active-bg-color		#ff00ff
 set $inactive-bg-color		#000000
+set $active-border-color	#00ff00
+set $inactive-border-color	#000000
 set $text-color			#f3f4f5
 set $inactive-text-color	#676E7D
 set $urgent-bg-color		#E53935
 
 # window colors
 #			border			background		text			indicator
-client.focused          $bg-color           	$active-bg-color	$text-color          	#00ff00
-client.unfocused        $bg-color 	    	$inactive-bg-color	$inactive-text-color 	#00ff00
+client.focused          $bg-color           	$active-border-color	$text-color          	#ff00ff
+client.unfocused        $bg-color 	    	$inactive-border-color	$inactive-text-color 	#00ff00
 client.focused_inactive $bg-color 	    	$inactive-bg-color	$inactive-text-color 	#00ff00
 client.urgent           $urgent-bg-color    	$urgent-bg-color	$text-color          	#00ff00
 
@@ -216,7 +218,7 @@ bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
 
 # lock screen
-bindsym $mod+x exec i3lock -i /home/yuri/wallpaper/current.png
+bindsym $mod+x exec lock.sh
  
 # screenshot
 bindsym $mod+p exec scrot -u -e   'xclip -selection clipboard -t "image/png" < $f' ~/Picture/screencap/lastcap.png
