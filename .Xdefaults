@@ -1,15 +1,15 @@
 ! special
 *.foreground:   #00ff00
 *.background:   #1d1f21
-*.cursorColor:  #00ff00
+*.cursorColor:  #ff00ff
 
 ! black
 *.color0:       #1d1f21
 *.color8:       #969896
 
 ! red
-*.color1:       #cc342b
-*.color9:       #cc342b
+*.color1:       #ff007f
+*.color9:       #ff007f
 
 ! green
 *.color2:       #198844
@@ -20,25 +20,24 @@
 *.color11:      #fba922
 
 ! blue
-*.color4:       #3971ed
-*.color12:      #3971ed
+*.color4:       #e320e3
+*.color12:      #e320e3
 
 ! magenta
-*.color5:       #a36ac7
-*.color13:      #a36ac7
+*.color5:       #3971ed
+*.color13:      #3971ed
 
 ! cyan
-*.color6:       #3971ed
-*.color14:      #3971ed
+*.color6:       #e320e3
+*.color14:      #e320e3
 
 ! white
 *.color7:       #c5c8c6
 *.color15:      #ffffff
 
-#urxvt settings
+! urxvt settings
 URxvt*font: xft:FiraMono:size=15
 URxvt*transparent: true
-URxvt*tintcolor: black
-URxvt*shading: 6
-URxvt*fading: 60
+URxvt*tintcolor: white
+URxvt*shading: 30
 URxvt*scrollBar: false
