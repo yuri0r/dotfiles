@@ -13,18 +13,18 @@ elif [ -z $1 ]
 then
 	i3-msg "workspace 8; append_layout /home/yuri/.config/i3/twitch.json"
 	google-chrome-stable --app=https://www.twitch.tv/$STREAMER/chat
-	st -e mpv https://www.twitch.tv/$STREAMER 
+	$TERMINAL -e mpv https://www.twitch.tv/$STREAMER 
 	exit 0
 
 #if -a is found only play audio
 elif [ "$1" = "-a" ]
 then
-	st -e mpv https://www.twitch.tv/$STREAMER --no-video
+	$TERMINAL -e mpv https://www.twitch.tv/$STREAMER --no-video
 	exit 0
 
 #if other params are given pass them to mpv
 else
-	st -e mpv https://www.twitch.tv/$STREAMER $1 
+	$TERMINAL -e mpv https://www.twitch.tv/$STREAMER $1 
 	exit 0
 fi
 
