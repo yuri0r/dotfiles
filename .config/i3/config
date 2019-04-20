@@ -27,7 +27,7 @@ smart_gaps on
 set $bg-color			#000000
 set $active-bg-color		#ff00ff
 set $inactive-bg-color		#000000
-set $active-border-color	#00ff00
+set $active-border-color	#ff00ff
 set $inactive-border-color	#000000
 set $text-color			#f3f4f5
 set $inactive-text-color	#676E7D
@@ -35,10 +35,10 @@ set $urgent-bg-color		#E53935
 
 # window colors
 #			border			background		text			indicator
-client.focused          $bg-color           	$active-border-color	$text-color          	#ff00ff
-client.unfocused        $bg-color 	    	$inactive-border-color	$inactive-text-color 	#00ff00
-client.focused_inactive $bg-color 	    	$inactive-bg-color	$inactive-text-color 	#00ff00
-client.urgent           $urgent-bg-color    	$urgent-bg-color	$text-color          	#00ff00
+client.focused          $bg-color           	$active-border-color	$text-color          	#00ff00
+client.unfocused        $bg-color 	    	$inactive-border-color	$inactive-text-color 	#000000
+client.focused_inactive $bg-color 	    	$inactive-bg-color	$inactive-text-color 	#000000
+client.urgent           $urgent-bg-color    	$urgent-bg-color	$text-color          	#000000
 
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
@@ -239,10 +239,12 @@ assign [instance="slack"] 9
 assign [instance="discord"] 9
 assign [instance="telegram"] 10
 assign [instance="tweetdeck.com"] 10
+assign [instance="jetbrains-studio"] 10
 
 # auto start
 exec --no-startup-id "i3-msg 'workspace 10; append_layout /home/yuri/.config/i3/social.json'"
 exec --no-startup-id "i3-msg 'workspace 2; append_layout /home/yuri/.config/i3/starterm.json'"
+exec --no-startup-id compton 
 exec --no-startup-id google-chrome-stable
 exec --no-startup-id telegram-desktop
 exec --no-startup-id tweetdeck.sh
