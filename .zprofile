@@ -2,7 +2,7 @@
 # /.zprofile
 #
 export PATH=$PATH:~/scripts
-export TERMINAL=st
+# export TERMINAL=st
 export XDG_CONFIG_HOME=~/.config
 export VDPAU_DRIVER=trace
 

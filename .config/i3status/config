@@ -18,7 +18,7 @@ general {
 
 order += "volume master"
 order += "wireless wlp58s0"
-order += "ethernet enp0s20f0u2"
+order += "ethernet enp0s20f0u1"
 order += "battery 0"
 order += "load"
 order += "tztime local"
@@ -28,7 +28,7 @@ wireless wlp58s0 {
     format_down = "wifi down"
 }
 
-ethernet enp0s20f0u2 {
+ethernet enp0s20f0u1 {
     format_up = "%ip"
     format_down = "eth down"
 }
