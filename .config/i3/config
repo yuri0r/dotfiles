@@ -228,7 +228,7 @@ bindsym $mod+control+p exec scrot -s
 
 # start programs
 bindsym $mod+n exec i3-sensible-terminal -e ncmpcpp 
-bindsym $mod+t exec i3-sensible-terminal -e top
+bindsym $mod+t exec i3-sensible-terminal -e htop
 
 # window settings
 #for_window [class="^.*"] border pixel 0
