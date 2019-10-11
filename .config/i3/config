@@ -219,13 +219,12 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightne
 
 # lock screen
 bindsym $mod+x exec lock.sh
-bindsym $mod+Shift+x exec lock.sh && systemctl suspend
+bindsym $mod+Shift+x exec lock.sh && systemctl suspend -i
  
 # screenshot
 bindsym $mod+p exec scrot -u -e   'xclip -selection clipboard -t "image/png" < $f' ~/Picture/screencap/lastcap.png
 bindsym $mod+Shift+p exec scrot -e   'xclip -selection clipboard -t "image/png" < $f' ~/Picture/screencap/lastcap.png
-bindsym $mod+control+p exec scrot -s
-
+ 
 # start programs
 bindsym $mod+n exec i3-sensible-terminal -e ncmpcpp 
 bindsym $mod+t exec i3-sensible-terminal -e htop
