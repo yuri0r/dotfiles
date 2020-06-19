@@ -19,6 +19,8 @@ zle -N bracketed-paste bracketed-paste-magic
 autoload -Uz url-quote-magic
 zle -N self-insert url-quote-magic
 
+CASE_SENSITIVE="false"
+
 #fancy or less fancy prompt
 #PROMPT='%B%F{white}[%F{red}%n%F{yellow}@%F{cyan}%m %F{magenta}%~%F{white}]%f%#%b '
 PROMPT='%B%~ %# %b'
@@ -44,3 +46,8 @@ alias pl='pacman -Si'
 
 alias n="nnn"
 alias wl="mpv 'https://www.youtube.com/playlist?list=WL'"
+
+alias dpl="drive pull"
+alias dps="drive push"
+
+eval $(thefuck --alias)

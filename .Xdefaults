@@ -39,5 +39,5 @@
 URxvt*font: xft:FiraMono:size=15
 URxvt*transparent: true
 URxvt*tintcolor: white
-URxvt*shading: 30
+URxvt*shading: 10
 URxvt*scrollBar: false

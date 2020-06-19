@@ -144,6 +144,8 @@ bindsym $mod+Shift+8 move container to workspace 8; workspace 8
 bindsym $mod+Shift+9 move container to workspace 9; workspace 9
 bindsym $mod+Shift+0 move container to workspace 10; workspace 10
 
+# move workspace
+bindsym $mod+m move workspace to output right
 # reload the configuration file
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
@@ -222,8 +224,9 @@ bindsym $mod+x exec lock.sh
 bindsym $mod+Shift+x exec lock.sh && systemctl suspend -i
  
 # screenshot
-bindsym $mod+p exec scrot -u -e   'xclip -selection clipboard -t "image/png" < $f' ~/Picture/screencap/lastcap.png
-bindsym $mod+Shift+p exec scrot -e   'xclip -selection clipboard -t "image/png" < $f' ~/Picture/screencap/lastcap.png
+bindsym $mod+p exec maim -i $(xdotool getactivewindow) | xclip -selection clipboard -t image/png #active window
+bindsym $mod+Shift+p exec maim -s | xclip -selection clipboard -t image/png #selection
+bindsym $mod+Control+p exec maim | xclip -selection clipboard -t image/png #entire screen
  
 # start programs
 bindsym $mod+n exec i3-sensible-terminal -e ncmpcpp 
@@ -235,7 +238,7 @@ bindsym $mod+t exec i3-sensible-terminal -e htop
 #for_window [instance="i3-sensible-terminal"] border pixel 1 
 
 # windows assigns
-assign [instance="google-chrome"] 1
+assign [class="firefox"] 1
 assign [instance="slack"] 9
 assign [instance="discord"] 9
 assign [instance="telegram"] 10
@@ -245,7 +248,7 @@ assign [instance="jetbrains-studio"] 10
 # auto start
 exec --no-startup-id "i3-msg 'workspace 10; append_layout /home/yuri/.config/i3/social.json'"
 exec --no-startup-id "i3-msg 'workspace 2; append_layout /home/yuri/.config/i3/starterm.json'"
-exec --no-startup-id google-chrome-stable
+exec --no-startup-id firefox
 exec --no-startup-id telegram-desktop
 exec --no-startup-id tweetdeck.sh
 exec --no-startup-id i3-sensible-terminal

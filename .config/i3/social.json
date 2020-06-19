@@ -6,6 +6,9 @@
     "type": "con",
     "nodes": [
         {
+            "border": "pixel",
+            "current_border_width": 1,
+            "floating": "auto_off",
             "geometry": {
                "height": 1053,
                "width": 960,
@@ -13,26 +16,31 @@
                "y": 0
             },
             "name": "TweetDeck",
-            "percent": 0.4,
+            "percent": 0.344444444444445,
             "swallows": [
                {
-               "instance": "^tweetdeck\\.com$"
+                "instance": "^tweetdeck\\.com$"
                }
             ],
             "type": "con"
         },
         {
+            "border": "pixel",
+            "current_border_width": 1,
+            "floating": "auto_off",
             "geometry": {
-               "height": 1025,
-               "width": 1340,
-               "x": 578,
-               "y": 26
+               "height": 1053,
+               "width": 1065,
+               "x": 854,
+               "y": 1
             },
             "name": "Telegram",
-            "percent": 0.6,
+            "percent": 0.655555555555556,
             "swallows": [
                {
-               "instance": "^telegram\\-desktop$"
+                "class": "^TelegramDesktop$",
+                "instance": "^telegram\\-desktop\\-bin$",
+                "title": "^Telegram$"
                }
             ],
             "type": "con"
